@@ -10,13 +10,13 @@ WHERE
 
 
 #PTSD
-SELECT ?drug ?drugLabel ?interacts ?interactsLabel ?moleculfun ?moleculfunLabel ?bioprocess ?bioprocessLabel ?treats ?treatsLabel
+SELECT ?drug ?drugLabel ?interacts ?interactsLabel ?moleculefun ?moleculefunLabel ?bioprocess ?bioprocessLabel ?treats ?treatsLabel
 WHERE 
 {
-  wd:Q202387 wdt:P2176 ?drug. #all drugs used to treat ptsd
-    ?drug wdt:P129 ?interacts. #what the drug interacts with
-        ?interacts wdt:P680 ?moleculfun. #what the molecular function of the interacted object is
-        ?interacts wdt:P682 ?bioprocess. #what biological processes the interacted object takes part in
-    ?drug wdt:P2175 ?treats #what diseses/disorders the drug treats     
+  wd:Q202387 wdt:P2176 ?drug.                                 # all drugs used to treat ptsd
+    ?drug wdt:P129 ?interacts.                                # what the drug interacts with
+        ?interacts wdt:P680 ?moleculefun.                     # what the molecular function of the interacted object is
+        ?interacts wdt:P682 ?bioprocess.                      # what biological processes the interacted object takes part in
+    ?drug wdt:P2175 ?treats                                   # what diseases/disorders the drug treats     
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }      
 }
