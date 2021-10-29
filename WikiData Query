@@ -1,8 +1,10 @@
 #PTSDtreatment
-SELECT ?drug ?drugLabel ?interactsWith ?interactsWithLabel ?roleOfInteraction
+SELECT ?drug ?drugLabel ?interactsWith ?interactsWithLabel ?roleOfInteraction ?roleOfInteractionLabel
 WHERE 
 {
-  wd:Q202387 wdt:P2176 ?drug.                                                       #list of all drugs that are used to treat PTSD
-  ?interactsWith wdt:P129 ?drug.                                                    #what these drugs target
-                                                                                    #find interaction type / class of drugs
+  wd:Q202387 wdt:P2176 ?drug.                                 # list of all the drugs used to treat PTSD
+  ?interactsWith wdt:P129 ?drug.                              # list of what this drug interacts with
+  ?drug wdt:P2868 ?roleOfInteraction.                         # list of role of drug
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } 
+}
+
