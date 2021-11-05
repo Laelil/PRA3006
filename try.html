@@ -108,9 +108,37 @@ chart = {
   
   return svg.node();
 }
-
+ </script>
+    
+    <script>
 data = JSON.stringify(results, undefined, 2);
-  </script>
+      </script>
+    
+    <script>
+    pack = data => d3.pack()
+    .size([width, height])
+    .padding(3)
+  (d3.hierarchy(data)
+    .sum(d => d.value)
+    .sort((a, b) => b.value - a.value))
+      </script>
+   
+    <script>
+    width = 932
+    height = width
+    format = d3.format(",d")
+    </script>
+    
+    <script>
+    color = d3.scaleLinear()
+    .domain([0, 5])
+    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .interpolate(d3.interpolateHcl)
+    </script>
+      
+     <script> 
+    d3 = require("d3@6")
+       </script>
    
 </body>
 </html>
