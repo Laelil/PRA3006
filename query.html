@@ -35,7 +35,6 @@ WHERE
     async function main () {
       const response = await fetch(url)
       const results = await response.json()
-       // const simpleResults = wdk.simplify.sparqlResults(results)
       document.getElementById('output').innerHTML =
         JSON.stringify(results, undefined, 2);
     }
