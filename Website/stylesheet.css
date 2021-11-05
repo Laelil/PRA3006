@@ -9,7 +9,7 @@
 }
 
 .header h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
   color: #000000; 
   font-family: 'Georgia';
   font-size: 30px;
-  padding: 15px; 
+  padding: 20px; 
 }
 
 .navbar {
