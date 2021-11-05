@@ -11,13 +11,10 @@
 <body>
   <pre id="output"></pre>
   <script>
-    query = `SELECT  ?drug ?drugLabel 
-        ?drugClass ?drugClassLabel 
-        # ?roleOfDrug ?roleOfDrugLabel 
-        ?otherDiseaseTreated ?otherDiseaseTreatedLabel 
+    query = `SELECT  ?drug ?drugLabel ?drugClass ?drugClassLabel ?otherDiseaseTreated ?otherDiseaseTreatedLabel ?chemicalFormula
+        # ?roleOfDrug ?roleOfDrugLabel  
         # ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel
-        # ?chemicalStructure ?chemicalStructureLabel
-        ?chemicalFormula 
+        # ?chemicalStructure ?chemicalStructureLabel 
         # ?molInteractsWith ?molInteractsWithLabel
         # ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
 
