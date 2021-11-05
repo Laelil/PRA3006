@@ -36,7 +36,8 @@ WHERE
       const response = await fetch(url)
       const results = await response.json()
       document.getElementById('output').innerHTML =
-        JSON.stringify(results, undefined, 2);
+        JSON.stringify(results, undefined, 2)
+      results.json = JSON.stringify(results, undefined, 2);
     }
     main()   
     
@@ -110,38 +111,36 @@ chart = {
 }
  </script>
     
-    <script>
-data = JSON.stringify(results, undefined, 2);
-      </script>
+<script>
+  data = FileAttachment("results.json").json()
+</script>
     
-    <script>
+<script>
     pack = data => d3.pack()
     .size([width, height])
     .padding(3)
   (d3.hierarchy(data)
     .sum(d => d.value)
     .sort((a, b) => b.value - a.value))
-      </script>
+ </script>
    
-    <script>
+<script>
     width = 932
     height = width
     format = d3.format(",d")
-    </script>
+</script>
     
-    <script>
+<script>
     color = d3.scaleLinear()
     .domain([0, 5])
     .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl)
-    </script>
+</script>
       
-     <script> 
+<script> 
     d3 = require("d3@6")
-       </script>
+</script>
    
-</body>
+</body> 
 </html>
-  </script>
-</body>
-</html>
+ 
