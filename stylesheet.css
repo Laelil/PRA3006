@@ -1,10 +1,10 @@
 
 .titl {
   width: calc(100%);
-  height: ;
-  background-color: ;
+  height: 55px ;
+  background-color: #cc99ff ;
   text-align: center;
-  font-size: calc(200%);
-  font-family: '';
-  padding: ;
+  font-size: calc(150%);
+  font-family: 'Georgia serif';
+  padding: 10px 0px ;
 }
