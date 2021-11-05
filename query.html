@@ -11,12 +11,15 @@
 <body>
   <pre id="output"></pre>
   <script>
-    query = `SELECT  ?drug ?drugLabel ?drugClass ?drugClassLabel ?otherDiseaseTreated ?otherDiseaseTreatedLabel ?chemicalFormula
-        # ?roleOfDrug ?roleOfDrugLabel  
-        # ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel
-        # ?chemicalStructure ?chemicalStructureLabel 
-        # ?molInteractsWith ?molInteractsWithLabel
-        # ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
+    query = `SELECT  ?drug ?drugLabel 
+        ?drugClass ?drugClassLabel 
+        ?otherDiseaseTreated ?otherDiseaseTreatedLabel 
+        ?chemicalFormula
+        ?roleOfDrug ?roleOfDrugLabel  
+        ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel
+        ?chemicalStructure ?chemicalStructureLabel 
+        ?molInteractsWith ?molInteractsWithLabel
+        ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
 
 WHERE 
 {
@@ -32,9 +35,9 @@ WHERE
     async function main () {
       const response = await fetch(url)
       const results = await response.json()
-      const simpleResults = wdk.simplify.sparqlResults(results)
+       // const simpleResults = wdk.simplify.sparqlResults(results)
       document.getElementById('output').innerHTML =
-        JSON.stringify(simpleResults, undefined, 2);
+        JSON.stringify(results, undefined, 2);
     }
     main()
   </script>
