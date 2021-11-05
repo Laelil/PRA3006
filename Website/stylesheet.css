@@ -58,13 +58,3 @@ li a.current {
 li a:hover {
   background-color: #809fff;
 }
-
-.footer {
-  padding: 20px; 
-  text-align: center; 
-  background: #b3c6ff; 
-  color: #000000; 
-  font-family: 'Georgia';
-  font-size: 15px;
-  float: bottom;
-}
