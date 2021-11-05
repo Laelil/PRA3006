@@ -2,19 +2,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+ <head>
+ <!-- d3 library --> <script src="https://d3js.org/d3.v4.min.js"></script>
+ <!-- Stylesheet --> <link rel='stylesheet' href="stylesheet.css">
+  
+  <!-- Initialize a global WBK function --> 
+  <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikibase-sdk.min.js"></script>
+  <!-- Initialize a global wdk object using the WBK object -->
+  <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikidata-sdk.min.js"></script>
+</script>
+ 
+ <title>Drug targeting in Post Traumatic Stress Disorder(PTSD)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
- .header {
-  padding: 80px; /* some padding */
-  text-align: center; /* center the text */
-  background: #1abc9c; /* green background */
-  color: white; /* white text color */
-}
+<div class="header">
+  <h1>Drug targeting in Post Traumatic Stress Disorder(PTSD)</h1>
+  <p>How do PTSD treatment drugs interact with their target proteins, and what is their role in relevant biological mechanisms?</p>
+</div>
+ 
+<div class="navbar">
+  <ul>
+    <a class="current" href="Homepage.html">Home</a></li>
+    <a href="DrugClass.html">Drug Classes</a></li>
+    <a href="Targets.html">Targets</a></li>
+    <a href="BioMech.html">Biological Mechanisms</a></li>
+    <a class="final" href="About.html">About</a></li>
+  </ul>
+</div>
 
-/* Increase the font size of the <h1> element */
-.header h1 {
-  font-size: 40px;
-}
+ ptsd is a very important
+ 
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 
+</head>
+
+<body>
+  
+ <pre id="output"></pre>
+  <script>
+    query = "SELECT ?compound ?cas WHERE { ?compound wdt:P231 ?cas } LIMIT 5000"
+    fetch(
+      wdk.sparqlQuery(query)
+    ).then( response => response.json()
+    ).then( wdk.simplify.sparqlResults
+    ).then(
+      function (response) {
+        document.getElementById('output').innerHTML =
+          JSON.stringify(response, undefined, 2);
+      }
+    )
+  </script>
 </body>
+  
 </html>
