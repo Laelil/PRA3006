@@ -59,3 +59,11 @@ li a:hover {
   background-color: #809fff;
 }
 
+.header {
+  padding: 30px; 
+  text-align: center; 
+  background: #cc99ff; 
+  color: #000000; 
+  font-family: 'Georgia';
+  font-size: 20px;
+}
