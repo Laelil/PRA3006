@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example 4</title>
+    <!-- Initialize a global WBK function -->
+    <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikibase-sdk.min.js"></script>
+    <!-- Initialize a global wdk object using the WBK object -->
+    <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikidata-sdk.min.js"></script>
+    <script type="text/javascript" src="dataset.json"></script>
+		<script type="text/javascript" src="javascrip.js"></script>
+</head>
+
+<body>
+<pre id="output"></pre>
+<script>
+    query = "SELECT ?drug ?drugLabel ?interactsWith ?interactsWithLabel ?roleOfInteraction ?roleOfInteractionLabel WHERE { wd:Q202387 wdt:P2176 ?drug.  ?interactsWith wdt:P129 ?drug. ?drug wdt:P2868 ?roleOfInteraction.} "
+    fetch(
+      wdk.sparqlQuery(query)
+    ).then( response => response.json()
+    ).then( wdk.simplify.sparqlResults
+    ).then(
+      function (response) {
+
+        // Store JSON data in a JS variable
+var json = '{"drug": "drugLabel", "drugClass", "drugClassLabel", "otherDiseaseTreated", "otherDiseaseTreatedLabel", "chemicalFormula"}';
+
+// Converting JSON-encoded string to JS object
+var obj = JSON.parse(json);
+
+// Accessing individual value from JS object
+alert(obj.drug); // Outputs: Peter
+alert(obj.drugLabel); // Outputs: 22
+alert(obj.drugClass); // Outputs: United States
+alert(obj.drugClassLabel); // Outputs: United States
+alert(obj.otherDiseaseTreated); // Outputs: United States
+alert(obj.otherDiseaseTreatedLabel); // Outputs: United States
+alert(obj.chemicalFormula); // Outputs: United States
+      }
+    )
+
+  </script>
+</body>
+</html>
