@@ -36,8 +36,7 @@ WHERE
       const response = await fetch(url)
       const results = await response.json()
       document.getElementById('output').innerHTML =
-        JSON.stringify(results, undefined, 2)
-      results.json = JSON.stringify(results, undefined, 2);
+        JSON.stringify(results, undefined, 2);
     }
     main()   
     
@@ -112,7 +111,7 @@ chart = {
  </script>
     
 <script>
-  data = FileAttachment("results.json").json()
+  // data = FileAttachment("results.json").json()
 </script>
     
 <script>
