@@ -60,10 +60,11 @@ li a:hover {
 }
 
 .footer {
-  padding: 30px; 
+  padding: 20px; 
   text-align: center; 
-  background: #cc99ff; 
+  background: #b3c6ff; 
   color: #000000; 
   font-family: 'Georgia';
-  font-size: 20px;
+  font-size: 15px;
+  float: bottom;
 }
