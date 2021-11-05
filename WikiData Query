@@ -21,7 +21,7 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
 }
   OPTIONAL { ?drug wdt:P279 ?drugClass. }                             
   OPTIONAL { ?drug wdt:P2868 ?drugFunction. } 
-  OPTIONAL { ?drug wdt:P274 ?chemicalFormula. }
+           { ?drug wdt:P274 ?chemicalFormula. }
   OPTIONAL { ?drug wdt:P117  ?chemicalStructure. } 
   OPTIONAL { ?drug wdt:P129 ?proteinInteraction. } 
   OPTIONAL { ?drug wdt:P2175 ?otherDiseaseTreated. } 
