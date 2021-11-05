@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <title>Example</title>
   <!-- Initialize a global WBK function -->
   <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikibase-sdk.min.js"></script>
   <!-- Initialize a global wdk object using the WBK object -->
   <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikidata-sdk.min.js"></script>
-
-  </head>
+</head>
+  
+  <body>
 chart = {
   const root = pack(data);
   let focus = root;
@@ -73,12 +75,10 @@ chart = {
         .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
         .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
   }
-
+  
   return svg.node();
 }
-  </head>
   
-<body>
   <pre id="output"></pre>
   <script>
     query = `SELECT  ?drug ?drugLabel 
