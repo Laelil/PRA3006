@@ -12,9 +12,7 @@
 <body>
 <pre id="output"></pre>
 <script>
-    query = "SELECT ?drug ?drugLabel ?interactsWith ?interactsWithLabel ?roleOfInteraction ?roleOfInteractionLabel 
-    WHERE { wd:Q202387 wdt:P2176 ?drug.  ?interactsWith wdt:P129 ?drug. ?drug wdt:P2868 ?roleOfInteraction.} 
-    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }"
+    query = "SELECT ?drug ?drugLabel ?interactsWith ?interactsWithLabel ?roleOfInteraction ?roleOfInteractionLabel WHERE { wd:Q202387 wdt:P2176 ?drug.  ?interactsWith wdt:P129 ?drug. ?drug wdt:P2868 ?roleOfInteraction.} SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }"
     fetch(
       wdk.sparqlQuery(query)
     ).then( response => response.json()
