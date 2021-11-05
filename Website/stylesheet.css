@@ -38,15 +38,11 @@ li a {
   float: left;
 }
 
-a.current {
-  background-color: #b3b3ff;
-}
-
 li a.final {
   float: right;
 }
 
 li a:hover {
-  background-color: #668cff;
+  background-color: #809fff;
 }
 
