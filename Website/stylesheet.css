@@ -1,6 +1,6 @@
 
 .header {
-  padding: 50px; 
+  padding: 45px; 
   text-align: center; 
   background: #cc99ff; 
   color: #000000; 
@@ -15,6 +15,12 @@ body {
   margin: 0;
   font-family: 'Arial';
   min-width: 1300px;
+}
+
+.titl { 
+  text-align: center; 
+  color: #000000; 
+  font-family: 'Georgia';
 }
 
 .navbar {
