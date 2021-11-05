@@ -3,7 +3,7 @@
   padding: 50px; 
   text-align: center; 
   background: #cc99ff; 
-  color: black; 
+  color: #000000; 
   font-family: 'Georgia';
 }
 
@@ -18,15 +18,32 @@ body {
 }
 
 .navbar {
-  font-family: 'Garamond';
   background-color: #b3c6ff;
-  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Garamond';
+}
+
+li a {
   display: block;
+  background-color: #c6b3ff;
+  color: #000000;
   padding: 14px 16px;
+  text-decoration: none;
+  float: left;
 }
 
 a.current {
   background-color: #809fff;
+}
+
+li a.final {
+  float: right;
 }
 
 li a:hover {
