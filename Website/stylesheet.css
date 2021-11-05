@@ -20,6 +20,9 @@ body {
 .navbar {
   font-family: 'Courier New';
   background-color: #b3c6ff;
+  color: black;
+  display: block;
+  padding: 14px 16px;
 }
 
 a.current {
