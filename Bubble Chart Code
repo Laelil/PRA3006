@@ -32,32 +32,6 @@
 
 			var color = d3.scaleOrdinal(d3.schemeCategory20);
 			
-			// create a tooltip
-  			var Tooltip = d3.select("#my_dataviz")
-    			.append("div")
-    			.style("opacity", 0)
-    			.attr("class", "tooltip")
-    			.style("background-color", "white")
-    			.style("border", "solid")
-    			.style("border-width", "2px")
-    			.style("border-radius", "5px")
-    			.style("padding", "5px")
-			
-			// Three function that change the tooltip when user hover / move / leave a cell
-  			var mouseover = function(d) {
-   			 Tooltip
-      			.style("opacity", 1)
- 			 }
- 			 var mousemove = function(d) {
-  			  Tooltip
-    			  .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
-     			 .style("left", (d3.mouse(this)[0]+20) + "px")
-     			 .style("top", (d3.mouse(this)[1]) + "px")
- 			 }
- 			 var mouseleave = function(d) {
-   			 Tooltip
-    			  .style("opacity", 0)
- 			 }
 
 			// Create a new structure from the data where each element has coordinates corresponds
 			// to the size of the holding SVG
