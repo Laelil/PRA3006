@@ -5,6 +5,7 @@
   background: #cc99ff; 
   color: #000000; 
   font-family: 'Georgia';
+  font-size: 80px;
 }
 
 .header h1 {
@@ -21,6 +22,7 @@ body {
   text-align: center; 
   color: #000000; 
   font-family: 'Georgia';
+   font-size: 50px;
 }
 
 .navbar {
