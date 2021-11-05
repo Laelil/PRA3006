@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Drug Targeting in Post Traumatic Stress Disorder (PTSD)</title>
+		<title>BubbleChart Example</title>
 		<!-- Import D3 visulaization library -->
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 
@@ -13,17 +13,15 @@
 		
 		<script>
 
-			dataset = [ {drugs: "Drug Classes"},
-						{drugs: "Drug Targets", count: 10},
-						{drugs: "Biological Mechanisms", count: 20},
-						{drugs: "Symptoms", count: 30}];
+			dataset = [ {protein: "Drug Classes", count: 10},
+						{protein: "Drug Targets", count: 20},
+						{protein: "Biological Mechanisms", count: 30},
+						{protein: "Symptoms", count: 40}];
 						
 			data = {};
-      
 			// restructure the asyncrounos response by creating a map of protein names and PDB counts
-			data.drugtargeting = dataset.map(function(item) { return { "Name": item.drugs, "Count": item.count } });
+			data.children = dataset.map(function(item) { return { "Name": item.protein , "Count": item.count } });
 
-      // set dimensions and margins of the graph
 			var width = 1200;
 			var height = 800;
 			
@@ -49,7 +47,7 @@
 					.data(bubble(nodes).descendants())
 					.enter()
 					.filter(function(d){
-					  return  !d.drugs
+					  return  !d.children
 					})
 					.append("g")
 					.attr("transform", function(d) {
@@ -80,7 +78,7 @@
 				  .attr("dy", "1.3em")
 				  .style("text-anchor", "middle")
 				  .text(function(d) {
-				   return "PDB count: " + d.data.Count;
+					  return "PDB count: " + d.data.Count;
 				  })
 				  .attr("font-family", "sans-serif")
 				  .attr("font-size", function(d){
