@@ -12,10 +12,10 @@
 		</div>
 		
 		<script>
-			dataset = [ {protein: "Drug Classes"},
-						{protein: "Drug Targets"},
-						{protein: "Biological Mechanisms"},
-						{protein: "Symptoms"];
+			dataset = [ {protein: "Drug Classes", count: 10},
+						{protein: "Drug Targets", count: 10},
+						{protein: "Biological Mechanisms", count: 10},
+						{protein: "Symptoms", count: 10}];
 						
 			data = {};
 			// restructure the asyncrounos response by creating a map of protein names and PDB counts
