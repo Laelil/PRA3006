@@ -48,6 +48,10 @@ li a.final {
   float: right;
 }
 
+li a.current {
+  background-color: #9999ff;
+}
+
 li a:hover {
   background-color: #809fff;
 }
