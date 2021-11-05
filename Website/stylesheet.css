@@ -18,7 +18,7 @@ body {
 }
 
 .navbar {
-  font-family: 'Courier New';
+  font-family: 'Garamond';
   background-color: #b3c6ff;
   color: black;
   display: block;
@@ -27,5 +27,9 @@ body {
 
 a.current {
   background-color: #809fff;
+}
+
+li a:hover {
+  background-color: #668cff;
 }
 
