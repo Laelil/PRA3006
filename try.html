@@ -10,6 +10,36 @@
 </head>
   
   <body>
+    
+  <pre id="output"></pre>
+  <script>
+    query = `SELECT  ?drug ?drugLabel 
+        ?drugClass ?drugClassLabel 
+        ?roleOfDrug ?roleOfDrugLabel 
+        ?otherDiseaseTreated ?otherDiseaseTreatedLabel 
+        ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel
+        ?chemicalStructure ?chemicalStructureLabel
+        ?chemicalFormula 
+        ?molInteractsWith ?molInteractsWithLabel
+        ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
+WHERE 
+{
+  wd:Q202387 wdt:P2176 ?drug.                                 # list of all the drugs used to treat PTSD
+  ?drug wdt:P279 ?drugClass.                                  # the class to which the drug belongs
+  ?drug wdt:P2868 ?roleofDrug.                                # the role of the drug (within the class?)
+  ?drug wdt:P2175 ?otherDiseaseTreated.                       # what other disease / conditions the drug can treat
+  ?drug wdt:P274 ?chemicalFormula                             # chemical formula                         
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}`;
+    const url = wdk.sparqlQuery(query)
+    async function main () {
+      const response = await fetch(url)
+      const results = await response.json()
+      document.getElementById('output').innerHTML =
+        JSON.stringify(results, undefined, 2);
+    }
+    main()   
+    
 chart = {
   const root = pack(data);
   let focus = root;
@@ -78,38 +108,8 @@ chart = {
   
   return svg.node();
 }
-  
-  <pre id="output"></pre>
-  <script>
-    query = `SELECT  ?drug ?drugLabel 
-        ?drugClass ?drugClassLabel 
-        ?roleOfDrug ?roleOfDrugLabel 
-        ?otherDiseaseTreated ?otherDiseaseTreatedLabel 
-        ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel
-        ?chemicalStructure ?chemicalStructureLabel
-        ?chemicalFormula 
-        ?molInteractsWith ?molInteractsWithLabel
-        ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
-WHERE 
-{
-  wd:Q202387 wdt:P2176 ?drug.                                 # list of all the drugs used to treat PTSD
-  ?drug wdt:P279 ?drugClass.                                  # the class to which the drug belongs
-  ?drug wdt:P2868 ?roleofDrug.                                # the role of the drug (within the class?)
-  ?drug wdt:P2175 ?otherDiseaseTreated.                       # what other disease / conditions the drug can treat
-  ?drug wdt:P274 ?chemicalFormula                             # chemical formula                         
- SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-}`;
-    const url = wdk.sparqlQuery(query)
-    async function main () {
-      const response = await fetch(url)
-      const results = await response.json()
-      document.getElementById('output').innerHTML =
-        JSON.stringify(results, undefined, 2);
-    }
-    main()
   </script>
-    
-    data = JSON.stringify(results, undefined, 2);
+   
 </body>
 </html>
   </script>
