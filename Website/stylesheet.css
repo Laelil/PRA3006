@@ -11,3 +11,18 @@
   font-size: 30px;
 }
 
+body {
+  margin: 0;
+  font-family: 'Arial';
+  min-width: 1300px;
+}
+
+.navbar {
+  font-family: 'Courier New';
+  background-color: #b3c6ff;
+}
+
+a.current {
+  background-color: #809fff;
+}
+
