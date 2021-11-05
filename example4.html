@@ -11,8 +11,16 @@
 <body>
   <pre id="output"></pre>
   <script>
-    query = #PTSDtreatment
-"SELECT  ?drug ?drugLabel ?drugClass ?drugClassLabel ?roleOfDrug ?roleOfDrugLabel ?otherDiseaseTreated ?otherDiseaseTreatedLabel ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel?chemicalStructure ?chemicalStructureLabel?chemicalFormula ?molInteractsWith ?molInteractsWithLabel ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
+    query = 
+SELECT  ?drug ?drugLabel 
+        ?drugClass ?drugClassLabel 
+        ?roleOfDrug ?roleOfDrugLabel 
+        ?otherDiseaseTreated ?otherDiseaseTreatedLabel 
+        ?significantDrugDrugInteractions ?significantDrugDrugInteractionsLabel
+        ?chemicalStructure ?chemicalStructureLabel
+        ?chemicalFormula 
+        ?molInteractsWith ?molInteractsWithLabel
+        ?involvedInBiologicalProcess ?involvedInBiologicalProcessLabel
 
 WHERE 
 {
@@ -22,7 +30,7 @@ WHERE
   ?drug wdt:P2175 ?otherDiseaseTreated.                       # what other disease / conditions the drug can treat
   ?drug wdt:P274 ?chemicalFormula                             # chemical formula
 
- SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }"
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } 
 }
     fetch(
       wdk.sparqlQuery(query)
