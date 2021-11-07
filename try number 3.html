@@ -17,7 +17,7 @@
 		</div>
 		
 		<script>
-			dataset = [ JSON.parse(DataQuery) ];
+			dataset = [ {fetch('mydata.json')} ];
 						
 			data = {};
 			// restructure the asyncrounos response by creating a map of protein names and PDB counts
