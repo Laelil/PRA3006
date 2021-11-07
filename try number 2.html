@@ -14,7 +14,7 @@
     
 <script>
 chart = {
-  const root = pack(data);
+  const root = pack($.getJSON('DataQuery.json', function(data)
   let focus = root;
   let view;
 
