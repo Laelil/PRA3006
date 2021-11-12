@@ -6,7 +6,161 @@ table, th, td {
 }
 </style>
 <body>
+ 
+  var druginfo = `[{"drug":"http://www.wikidata.org/entity/Q221174",
+              "drugLabel":"topiramate",
+              "drugFunction":"anticonvulsant agent, anti-obesity medication, neuroprotective agent",
+              "chemicalFormula":"C₁₂H₂₁NO₈S",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Topiramate.svg",
+              "proteinInteraction":"Carbonic anhydrase 4, Carbonic anhydrase 12, Carbonic anhydrase 7, Carbonic anhydrase 1",
+              "otherDiseaseTreated":"epilepsy, pain, bipolar disorder, migraine, mood disorders, post-traumatic stress disorder, essential tremor, tonic–clonic seizure, focal epilepsy, migraine with aura, infantile epileptic encephalopathy, intracranial hypertension",
+              "drugInteractions":""},
+  
+              {"drug":"http://www.wikidata.org/entity/Q319877",
+              "drugLabel":"alprazolam",
+              "drugFunction":"anxiolytic, GABAA receptor positive allosteric modulators, hypnotics and sedatives, GABA Modulators",
+              "chemicalFormula":"C₁₇H₁₃ClN₄","chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Alprazolam%20structure.svg",
+              "proteinInteraction":"Gamma-aminobutyric acid type A receptor subunit alpha1, Gamma-aminobutyric acid type A receptor subunit alpha5, Gamma-aminobutyric acid type A receptor subunit alpha3, Gamma-aminobutyric acid type A receptor subunit alpha2",
+              "otherDiseaseTreated":"anxiety, agoraphobia, post-traumatic stress disorder, anxiety disorder, panic disorder, generalized anxiety disorder, insomnia, substance abuse, neurotic disorder, sleep-wake disorder",
+              "drugInteractions":""},
+              
+              {"drug":"http://www.wikidata.org/entity/Q422244",
+              "drugLabel":"fluoxetine",
+              "drugFunction":"Cytochrome P-450 CYP2D6 Inhibitors, selective serotonin reuptake inhibitor, second-generation antidepressive agents",
+              "chemicalFormula":"C₁₇H₁₈F₃NO",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Fluoxetin%20Structural%20Formulae%20of%20both%20enantiomers.png",
+              "proteinInteraction":"5-hydroxytryptamine receptor 2B, Anoctamin 1, Solute carrier family 29 member 4, Potassium inwardly-rectifying channel, subfamily J, member 6, Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"mental disorder, anxiety, obsessive-compulsive disorder, bulimia, mood disorders, post-traumatic stress disorder, anxiety disorder, panic disorder, neurotic disorder",
+              "drugInteractions":"(±)-deprenyl, isocarboxazid, procarbazine, phenelzine, tranylcypromine"},
+  
+              {"drug":"http://www.wikidata.org/entity/Q423757",
+              "drugLabel":"escitalopram",
+              "drugFunction":"selective serotonin reuptake inhibitor",
+               "chemicalFormula":"C₂₀H₂₁FN₂O",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Escitalopram.svg",
+              "proteinInteraction":"Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"obsessive-compulsive disorder, post-traumatic stress disorder, anxiety disorder, generalized anxiety disorder, substance abuse, neurotic disorder, anxiety", 
+              "drugInteractions":"(RS)-methadone, erythromycin, haloperidol, (±)-deprenyl, chlorpromazine, anagrelide, dronedarone, isocarboxazid, (RS)-citalopram, ondansetron, amiodarone, quinidine, sotalol, pentamidine, procainamide, terfenadine, procarbazine, sevoflurane, tranylcypromine, flecainide, sulpiride, chloroquine, astemizole, domperidone, moxifloxacin, disopyramide, cisapride, halofantrine, sparfloxacin, arsenic trioxide, cocaine, thioridazine, clarithromycin, pimozide, azithromycin, droperidol, phenelzine, dofetilide, ibutilide, bepridil, mesoridazine, probucol"},
+  
+              {"drug":"http://www.wikidata.org/entity/Q408535",
+              "drugLabel":"quetiapine",
+              "drugFunction":"serotonin antagonist, H1 antagonist, alpha blocker, dopamine antagonist",
+              "chemicalFormula":"C₂₁H₂₅N₃O₂S",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Quetiapine.svg",
+              "proteinInteraction":"Dopamine receptor D2, Solute carrier family 6 member 2, 5-hydroxytryptamine receptor 1A, 5-hydroxytryptamine receptor 1D, 5-hydroxytryptamine receptor 1E, 5-hydroxytryptamine receptor 1F, Histamine receptor H1, 5-hydroxytryptamine receptor 2A",
+              "otherDiseaseTreated":"dementia, bipolar disorder, anxiety, psychosis, Alzheimer's disease, mental disorder, autism, obsessive-compulsive disorder, mood disorders, post-traumatic stress disorder, borderline personality disorder, personality disorder, anxiety disorder, insomnia, schizophreniform disorder, substance abuse, sleep-wake disorder, schizoaffective disorder, generalized anxiety disorder",
+              "drugInteractions":""},
+  
+              {"drug":"http://www.wikidata.org/entity/Q411932",
+              "drugLabel":"duloxetine",
+              "drugFunction":"selective serotonin reuptake inhibitor, adrenergic uptake inhibitors",
+              "chemicalFormula":"C₁₈H₁₉NOS",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Duloxetine.png",
+              "proteinInteraction":"5-hydroxytryptamine receptor 2A, Solute carrier family 6 member 2, 5-hydroxytryptamine receptor 2C, 5-hydroxytryptamine receptor 6, Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"mental disorder, major depressive disorder, migraine, anxiety, arthritis, obsessive-compulsive disorder, mood disorders, post-traumatic stress disorder, fibromyalgia, anxiety disorder, generalized anxiety disorder, postpartum depression, peripheral neuropathy, complex regional pain syndrome, osteoarthritis susceptibility 1",
+              "drugInteractions":"(±)-deprenyl, isocarboxazid, tranylcypromine, procarbazine, phenelzine"},
+  
+              {"drug":"http://www.wikidata.org/entity/Q412443",
+              "drugLabel":"risperidone",
+              "drugFunction":"alpha blocker, dopamine antagonist, serotonin antagonist, antipsychotics, H1 antagonist",
+              "chemicalFormula":"C₂₃H₂₇FN₄O₂",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Risperidone%20Structural%20Formulae%20V.1.svg",
+              "proteinInteraction":"Adrenoceptor alpha 1A, Adrenoceptor alpha 1B, Histamine receptor H1, 5-hydroxytryptamine receptor 2A, Dopamine receptor D2, Adrenoceptor alpha 1D, 5-hydroxytryptamine receptor 2C, 5-hydroxytryptamine receptor 7, 5-hydroxytryptamine receptor 6, Dopamine receptor D3, 5-hydroxytryptamine receptor 1A, 5-hydroxytryptamine receptor 1D, 5-hydroxytryptamine receptor 1E, 5-hydroxytryptamine receptor 1F, 5-hydroxytryptamine receptor 1B",
+              "otherDiseaseTreated":"intermittent explosive disorder, mental disorder, dementia, bipolar disorder, anxiety, autism, post-traumatic stress disorder, personality disorder, psychosis, obsessive-compulsive disorder, schizophrenia, bipolar I disorder, pervasive developmental disorder, Alzheimer's disease, anxiety disorder, intellectual disability, sleep-wake disorder, conduct disorder, schizoaffective disorder, oppositional defiant disorder, insomnia, impulse control disorder, mood disorders, Tourette syndrome",
+              "drugInteractions":""},
 
+              {"drug":"http://www.wikidata.org/entity/Q408471",
+              "drugLabel":"paroxetine",
+              "drugFunction":"Cytochrome P-450 CYP2D6 Inhibitors, selective serotonin reuptake inhibitor, second-generation antidepressive agents",
+              "chemicalFormula":"C₁₉H₂₀FNO₃",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Paroxetine%20Structural%20Formulae%20V.1.svg",
+              "proteinInteraction":"Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"neurotic disorder, anxiety, obsessive-compulsive disorder, post-traumatic stress disorder, Social Anxiety Disorder, eating disorder, anxiety disorder, panic disorder, generalized anxiety disorder",
+              "drugInteractions":"phenelzine, (±)-deprenyl, isocarboxazid, procarbazine, tranylcypromine"},
+
+              {"drug":"http://www.wikidata.org/entity/Q407988",
+              "drugLabel":"clonazepam",
+              "drugFunction":"anticonvulsant agent, GABAA receptor positive allosteric modulators, GABA Modulators",
+              "chemicalFormula":"C₁₅H₁₀ClN₃O₃",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Clonazepam.svg",
+              "proteinInteraction":"Gamma-aminobutyric acid type A receptor subunit alpha2, Gamma-aminobutyric acid type A receptor subunit alpha1, Gamma-aminobutyric acid type A receptor subunit alpha3",
+              "otherDiseaseTreated":"generalized anxiety disorder, restless legs syndrome, insomnia, transient tic disorder, childhood absence epilepsy, early myoclonic encephalopathy, Myoclonic epilepsy, sleep-wake disorder, schizophrenia, epilepsy, bipolar disorder, anxiety, post-traumatic stress disorder, dysarthria, anxiety disorder, panic disorder",
+              "drugInteractions":""},
+
+              {"drug":"http://www.wikidata.org/entity/Q898407",
+              "drugLabel":"venlafaxine",
+              "drugFunction":"adrenergic uptake inhibitors, selective serotonin reuptake inhibitor",
+              "chemicalFormula":"C₁₇H₂₇NO₂",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Venlafaxine%20flat.svg, http://commons.wikimedia.org/wiki/Special:FilePath/Venlafaxine%20structure.svg",
+              "proteinInteraction":"Solute carrier family 6 member 2, Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"pain, migraine, anxiety, obsessive-compulsive disorder, attention deficit hyperactivity disorder, post-traumatic stress disorder, borderline personality disorder, chronic fatigue syndrome, fibromyalgia, anxiety disorder, generalized anxiety disorder, neurotic disorder, autism",
+              "drugInteractions":"(±)-deprenyl, isocarboxazid, procarbazine, tranylcypromine, phenelzine"},
+
+              {"drug":"http://www.wikidata.org/entity/Q425296",
+              "drugLabel":"prazosin",
+              "drugFunction":"antihypertensive drug, alpha blocker, adrenergic alpha-1 receptor antagonists",
+              "chemicalFormula":"C₁₉H₂₁N₅O₄",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Prazosin.svg",
+              "proteinInteraction":"Adrenoceptor alpha 1B, Adrenoceptor alpha 1D, Adrenoceptor alpha 2C, Adrenoceptor alpha 2A, Adrenoceptor alpha 2B, Adrenoceptor alpha 1A",
+              "otherDiseaseTreated":"arterial hypertension, post-traumatic stress disorder, prostatic hypertrophy, Raynaud disease, urinary retention",
+              "drugInteractions":""},
+
+              {"drug":"http://www.wikidata.org/entity/Q410412",
+              "drugLabel":"carbamazepin",
+              "drugFunction":"non-opioid analgesic, antimanic agents, cytochrome P-450 CYP3A inducers, anticonvulsant agent",
+              "chemicalFormula":"C₁₅H₁₂N₂O",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Carbamazepine.svg",
+              "proteinInteraction":"",
+              "otherDiseaseTreated":"temporal lobe epilepsy, restless legs syndrome, trigeminal neuralgia, tonic–clonic seizure, complex partial seizure, schizophrenia, epilepsy, bipolar disorder, mood disorders, post-traumatic stress disorder",
+              "drugInteractions":""},
+
+              {"drug":"http://www.wikidata.org/entity/Q411188",
+              "drugLabel":"aripiprazole",
+              "drugFunction":"antipsychotics, atypical antipsychotic",
+              "chemicalFormula":"C₂₃H₂₇Cl₂N₃O₂",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Aripiprazole.svg",
+              "proteinInteraction":"5-hydroxytryptamine receptor 1B, Histamine receptor H1, 5-hydroxytryptamine receptor 2A, Dopamine receptor D2, 5-hydroxytryptamine receptor 2C, 5-hydroxytryptamine receptor 1A, 5-hydroxytryptamine receptor 1D",
+              "otherDiseaseTreated":"Alzheimer's disease, mental disorder, schizophrenia, dementia, anxiety, psychosis, obsessive-compulsive disorder, mood disorders, Tourette syndrome, post-traumatic stress disorder, borderline personality disorder, personality disorder, schizoaffective disorder",
+              "drugInteractions":""},
+
+              {"drug":"http://www.wikidata.org/entity/Q409672",
+              "drugLabel":"(RS)-citalopram",
+              "drugFunction":"selective serotonin reuptake inhibitor, second-generation antidepressive agents",
+              "chemicalFormula":"C₂₀H₂₁FN₂O",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Citalopram.svg",
+              "proteinInteraction":"Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"mental disorder, dementia, anxiety, obsessive-compulsive disorder, mood disorders, post-traumatic stress disorder, anxiety disorder, generalized anxiety disorder, substance abuse, diabetic polyneuropathy, alcohol abuse, nicotine dependence, neurotic disorder",
+              "drugInteractions":"arsenic trioxide, cocaine, thioridazine, clarithromycin, pimozide, azithromycin, droperidol, (RS)-methadone, erythromycin, haloperidol, (±)-deprenyl, chlorpromazine, ondansetron, amiodarone, quinidine, sotalol, pentamidine, sulpiride, chloroquine, astemizole, escitalopram, domperidone, moxifloxacin, disopyramide, cisapride, halofantrine, procainamide, terfenadine, procarbazine, sevoflurane, anagrelide, dronedarone, isocarboxazid, tranylcypromine, flecainide, sparfloxacin, phenelzine, dofetilide, ibutilide, bepridil, mesoridazine, probucol"},
+
+              {"drug":"http://www.wikidata.org/entity/Q416632",
+              "drugLabel":"nefazodone",
+              "drugFunction":"second-generation antidepressive agents, selective serotonin reuptake inhibitor, adrenergic uptake inhibitors",
+              "chemicalFormula":"C₂₅H₃₂ClN₅O₂",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Nefazodone.svg",
+              "proteinInteraction":"5-hydroxytryptamine receptor 2A, Solute carrier family 6 member 2, Solute carrier family 6 member 4, Cytochrome P450 family 3 subfamily A member 4",
+              "otherDiseaseTreated":"post-traumatic stress disorder, mental depression, neurotic disorder",
+              "drugInteractions":"procarbazine, tranylcypromine, phenelzine, (±)-deprenyl, isocarboxazid"},
+
+              {"drug":"http://www.wikidata.org/entity/Q407617",
+              "drugLabel":"sertraline",
+              "drugFunction":"antidepressant, selective serotonin reuptake inhibitor",
+              "chemicalFormula":"C₁₇H₁₇Cl₂N",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Sertraline.svg",
+              "proteinInteraction":"Solute carrier family 6 member 4",
+              "otherDiseaseTreated":"mental disorder, obsessive-compulsive disorder, post-traumatic stress disorder, eating disorder, anxiety disorder, panic disorder, generalized anxiety disorder, postpartum depression, neurotic disorder",
+              "drugInteractions":"(±)-deprenyl, isocarboxazid, procarbazine, tranylcypromine, phenelzine"},
+
+              {"drug":"http://www.wikidata.org/entity/Q410346",
+              "drugLabel":"lamotrigine",
+              "drugFunction":"calcium channel blocker, anticonvulsant agent, excitatory amino acid antagonist, Voltage-Gated Sodium Channel Blockers",
+              "chemicalFormula":"C₉H₇Cl₂N₅",
+              "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Lamotrigine.svg",
+              "proteinInteraction":"",
+              "otherDiseaseTreated":"mental disorder, epilepsy, bipolar disorder, migraine, anxiety, mood disorders, post-traumatic stress disorder, borderline personality disorder, temporal lobe epilepsy, trigeminal neuralgia, neurological disorder, focal epilepsy, visual epilepsy",
+              "drugInteractions":"paracetamol"}]`
+
+  var data = JSON.parse(druginfo)
+  
 <h2>A basic HTML table</h2>
 
 <table style="width:100%">
@@ -16,9 +170,7 @@ table, th, td {
     <th>Country</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td>(data)</td>
   </tr>
   <tr>
     <td>Centro comercial Moctezuma</td>
