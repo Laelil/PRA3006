@@ -27,3 +27,21 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
   OPTIONAL { ?drug wdt:P2175 ?otherDiseaseTreated. } 
 }
 GROUP BY ?drug ?drugLabel ?drugClassLabel
+
+________________________________
+drug classes query (not finalized but somewhat working)
+
+SELECT ?drug ?drugLabel 
+(GROUP_CONCAT(DISTINCT ?drugClassLabel;separator=", ") as ?drugClass)
+{
+  wd:Q202387 wdt:P2176 ?drug;
+
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
+    ?drug rdfs:label ?drugLabel.
+    ?drugClass rdfs:label ?drugClassLabel.
+                        
+                        }
+OPTIONAL { ?drug wdt:P279 ?drugClass. } 
+  }
+
+GROUP BY ?drug ?drugLabel ?drugClassLabel
