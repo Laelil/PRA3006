@@ -6,6 +6,7 @@ SELECT ?drug ?drugLabel
 (GROUP_CONCAT(DISTINCT ?chemicalStructureLabel;separator=", ") as ?chemicalStructure)
 (GROUP_CONCAT(DISTINCT ?proteinInteractionLabel;separator=", ") as ?proteinInteraction)
 (GROUP_CONCAT(DISTINCT ?otherDiseaseTreatedLabel;separator=", ") as ?otherDiseaseTreated)
+(GROUP_CONCAT(DISTINCT ?drugInteractionsLabel;separator=", ") as ?drugInteractions)
 {
   wd:Q202387 wdt:P2176 ?drug;
 
@@ -15,13 +16,15 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
     ?chemicalFormula rdfs:label ?chemicalFormulaLabel.
     ?chemicalStructure rdfs:label ?chemicalStructureLabel.
     ?proteinInteraction rdfs:label ?proteinInteractionLabel.
-    ?otherDiseaseTreated rdfs:label ?otherDiseaseTreatedLabel.                       
+    ?otherDiseaseTreated rdfs:label ?otherDiseaseTreatedLabel. 
+    ?drugInteractions rdfs:label ?drugInteractionsLabel.
 }                          
   OPTIONAL { ?drug wdt:P2868 ?drugFunction. } 
            { ?drug wdt:P274 ?chemicalFormula. }
   OPTIONAL { ?drug wdt:P117  ?chemicalStructure. } 
   OPTIONAL { ?drug wdt:P129 ?proteinInteraction. } 
   OPTIONAL { ?drug wdt:P2175 ?otherDiseaseTreated. } 
+  OPTIONAL { ?drug wdt:P769 ?drugInteractions. }
 }
 GROUP BY ?drug ?drugLabel 
 
