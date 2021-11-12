@@ -1,17 +1,19 @@
-#PTSDhome
+#PTSDhome (the working version)
 
-SELECT DISTINCT ?drug ?drugLabel 
-(GROUP_CONCAT(DISTINCT ?drugClassLabel;separator=", ") as ?drugClass)
+SELECT DISTINCT ?drugClassLabel
+(GROUP_CONCAT(DISTINCT ?drugLabel;separator=", ") as ?drug)
 {
   wd:Q202387 wdt:P2176 ?drug;
 
 SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
     ?drug rdfs:label ?drugLabel.
-    ?drugClass rdfs:label ?drugClassLabel.                 
-}
-  OPTIONAL { ?drug wdt:P279 ?drugClass. }                             
-}
-GROUP BY ?drug ?drugLabel ?drugClassLabel
+    ?drugClass rdfs:label ?drugClassLabel.
+                        
+                        }
+OPTIONAL { ?drug wdt:P279 ?drugClass. } 
+  }
+
+GROUP BY  ?drugClassLabel
 ORDER BY DESC(?drugClass) 
 
 ________________________________
