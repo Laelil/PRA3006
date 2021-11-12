@@ -10,8 +10,7 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
     ?drugClass rdfs:label ?drugClassLabel.
                         
                         }
-OPTIONAL { ?drug wdt:P279 ?drugClass. } 
+{ ?drug wdt:P279 ?drugClass. } 
   }
 
 GROUP BY  ?drugClassLabel
-ORDER BY DESC(?drugClass) 
