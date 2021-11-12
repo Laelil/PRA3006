@@ -27,7 +27,7 @@ GROUP BY ?drug ?drugLabel
 
 - - - ------------------------------------------------------------------------------- - - - 
 
-#PTSDdrugImahe
+#PTSDdrugImage
 
 SELECT ?drug ?drugLabel 
 (GROUP_CONCAT(DISTINCT ?chemicalFormulaLabel;separator=", ") as ?chemicalFormula)
