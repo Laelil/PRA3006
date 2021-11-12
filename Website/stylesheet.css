@@ -58,3 +58,8 @@ li a.current {
 li a:hover {
   background-color: #809fff;
 }
+
+.photos img {
+    width: 250px;
+    height: 250px;
+}
