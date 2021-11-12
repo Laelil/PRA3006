@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <style>
 table, th, td {
   border:1px solid black;
 }
 </style>
 <body>
- 
+  
+  <style>
   var druginfo = `[{"drug":"http://www.wikidata.org/entity/Q221174",
               "drugLabel":"topiramate",
               "drugFunction":"anticonvulsant agent, anti-obesity medication, neuroprotective agent",
@@ -158,8 +160,11 @@ table, th, td {
               "proteinInteraction":"",
               "otherDiseaseTreated":"mental disorder, epilepsy, bipolar disorder, migraine, anxiety, mood disorders, post-traumatic stress disorder, borderline personality disorder, temporal lobe epilepsy, trigeminal neuralgia, neurological disorder, focal epilepsy, visual epilepsy",
               "drugInteractions":"paracetamol"}]`
-
+</style>
+  
+<style>
   var data = JSON.parse(druginfo)
+</style>
   
 <h2>A basic HTML table</h2>
 
@@ -170,7 +175,7 @@ table, th, td {
     <th>Country</th>
   </tr>
   <tr>
-    <td>(data)</td>
+    <td>data</td>
   </tr>
   <tr>
     <td>Centro comercial Moctezuma</td>
