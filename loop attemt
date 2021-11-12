@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bublito</title>
+</head>
+<body>
+<script>
+      // Store JSON data in a JS variable
+ // Store JSON data in a JS variable
+    var json = '{"drug": "http://www.wikidata.org/entity/Q416632", "drugLabel": "nefazodone", "drugClass":"","drugFunction":"selective serotonin reuptake inhibitor, adrenergic uptake inhibitors, second-generation antidepressive agents", "chemicalFormula":"C₂₅H₃₂ClN₅O₂", "chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Nefazodone.svg", "proteinInteraction": "Solute carrier family 6 member 2, Solute carrier family 6 member 4, Cytochrome P450 family 3 subfamily A member 4, 5-hydroxytryptamine receptor 2A", "otherDiseaseTreated": "post-traumatic stress disorder, mental depression, neurotic disorder"}, {"drug":"http://www.wikidata.org/entity/Q422244","drugLabel":"fluoxetine","drugClass":"","drugFunction":"selective serotonin reuptake inhibitor, second-generation antidepressive agents, Cytochrome P-450 CYP2D6 Inhibitors","chemicalFormula":"C₁₇H₁₈F₃NO","chemicalStructure":"http://commons.wikimedia.org/wiki/Special:FilePath/Fluoxetin%20Structural%20Formulae%20of%20both%20enantiomers.png","proteinInteraction":"Solute carrier family 6 member 4, 5-hydroxytryptamine receptor 2B, Anoctamin 1, Solute carrier family 29 member 4, Potassium inwardly-rectifying channel, subfamily J, member 6","otherDiseaseTreated":"mental disorder, anxiety, obsessive-compulsive disorder, bulimia, mood disorders, post-traumatic stress disorder, anxiety disorder, panic disorder, neurotic disorder"}';
+
+    // Converting JSON encoded string to JS object
+    var obj = JSON.parse(json);
+
+        // Define recursive function to print nested values
+    function printValues(obj) {
+        for(var k in obj) {
+            if(obj[k] instanceof Object) {
+                printValues(obj[k]);
+            } else {
+                document.write(obj[k] + "<br>");
+            };
+        }
+    };
+
+    // Printing all the values from the resulting object
+    printValues(obj);
+
+    document.write("<hr>");
+
+
+</script>
+</body>
+</html>
