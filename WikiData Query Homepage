@@ -1,0 +1,15 @@
+#PTSDhome
+
+SELECT DISTINCT ?drug ?drugLabel 
+(GROUP_CONCAT(DISTINCT ?drugClassLabel;separator=", ") as ?drugClass)
+{
+  wd:Q202387 wdt:P2176 ?drug;
+
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
+    ?drug rdfs:label ?drugLabel.
+    ?drugClass rdfs:label ?drugClassLabel.                 
+}
+  OPTIONAL { ?drug wdt:P279 ?drugClass. }                             
+}
+GROUP BY ?drug ?drugLabel ?drugClassLabel
+ORDER BY DESC(?drugClass) 
