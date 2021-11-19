@@ -117,7 +117,7 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
                         }
 OPTIONAL { ?drug wdt:P2868 ?drugClass. }
   }
-GROUP BY  ?drugClassLabel
+GROUP BY  ?drugClassLabel ?drug
 ORDER BY DESC(?drugClass)
 `;
     const url = wdk.sparqlQuery(query)
