@@ -74,4 +74,10 @@ li a:hover {
   border:1px solid black;
   font-size: 19px;
   padding: 8px;
+  background-color: #c6b3ff;
+ }
+
+table{
+  padding:2px;
+  border:2px solid black;
  }
