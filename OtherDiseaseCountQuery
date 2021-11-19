@@ -1,0 +1,14 @@
+#DiseaseDrugCount
+
+SELECT ?drug ?drugLabel (COUNT(?otherDisease) AS ?DiseaseCount)
+WHERE
+{
+
+wd:Q202387 wdt:P2176 ?drug.
+?drug wdt:P2175 ?otherDisease.
+
+           
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } # Helps get the label in your language, if not, then en language
+}
+
+GROUP BY ?drug ?drugLabel
