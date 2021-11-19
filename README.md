@@ -9,8 +9,8 @@ Underneath, you can find directions on running the code and using the platform.
 4. For a detailed explanation on how to use this plaform, refer to the information underneath.
 
 ## Using the platform
-
-
+* Our homepage displays ...
+* complete this once the homepage is done 
 
 ## Repository information
 how to use the repository
