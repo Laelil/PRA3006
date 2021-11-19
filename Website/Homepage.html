@@ -88,7 +88,8 @@
 
     </div>
 
-
+ <div class="center2">
+   
 <pre id="output"></pre>
 
 
@@ -203,13 +204,15 @@ var pack = d3.pack()
     node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
     circle.attr("r", function(d) { return d.r * k; });
   }
+      
 
 
     return resultsSimple
     }
     results = main()
 
-
+</div>
+  
 </script>
 
 </div>
