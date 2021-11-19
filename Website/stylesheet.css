@@ -93,4 +93,5 @@ li a:hover {
 table{
   padding:2px;
   border:2px solid black;
+  text-align: center; 
  }
