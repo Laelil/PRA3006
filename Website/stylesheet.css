@@ -15,7 +15,7 @@
 }
 
 body {
-  margin: 10;
+  margin: 0;
   font-family: 'Arial';
   min-width: 1300px;
 }
@@ -70,7 +70,7 @@ li a:hover {
     height: 250px;
 }
 
-.th { 
+.header h2 { 
   text-align: center; 
   font-size: 10px;
   padding: 5px; 
