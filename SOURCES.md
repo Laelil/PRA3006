@@ -13,6 +13,7 @@ Sources for PTSD topic:
   
  PTSD statistics:
  * Hull, M. (2021, August 26). PTSD Facts and Statistics: The Recovery Village. The Recovery Village Drug and Alcohol Rehab. Retrieved November 19, 2021, from https://www.therecoveryvillage.com/mental-health/ptsd/related/ptsd-statistics/. 
+ * Medline ® Abstract for Reference 1 of 'Posttraumatic stress disorder in adults: Epidemiology, pathophysiology, clinical manifestations, course, assessment, and diagnosis' 
 
 
 
