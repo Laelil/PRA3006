@@ -1,3 +1,5 @@
+/* Basic text and page styling */ 
+/* */ 
 
 .header {
   padding: 45px; 
@@ -13,7 +15,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 10;
   font-family: 'Arial';
   min-width: 1300px;
 }
@@ -25,6 +27,8 @@ body {
   font-size: 30px;
   padding: 20px; 
 }
+
+/* Navigational bar styling */ 
 
 .navbar {
   background-color: #b3c6ff;
@@ -59,7 +63,15 @@ li a:hover {
   background-color: #809fff;
 }
 
+/* Table styling */ 
+
 .photos img {
     width: 250px;
     height: 250px;
+}
+
+.th { 
+  text-align: center; 
+  font-size: 10px;
+  padding: 5px; 
 }
