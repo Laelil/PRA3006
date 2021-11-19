@@ -28,6 +28,11 @@ body {
   padding: 20px; 
 }
 
+.container {
+	margin-left: 50px;
+  margin-right: 50px;
+}
+
 /* Navigational bar styling */ 
 
 .navbar {
@@ -82,3 +87,8 @@ table{
   border:2px solid black;
   text-align: center; 
  }
+
+.center {
+	margin-left: 100px;
+  margin-right: 100px;
+}
