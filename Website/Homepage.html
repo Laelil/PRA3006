@@ -108,14 +108,17 @@
 
 query = `#PTSDhome (the working version)
 SELECT DISTINCT ?drugClassLabel
-(GROUP_CONCAT(DISTINCT ?drugLabel;separator=", ") as ?drug)
+(GROUP_CONCAT(DISTINCT ?drugLabel;separator=", ") AS ?drug)
+(COUNT(?otherDisease) AS ?DiseaseCount)
 {
-  wd:Q202387 wdt:P2176 ?drug;
+  wd:Q202387 wdt:P2176 ?drug.
+  ?drug wdt:P2175 ?otherDisease.
+
 SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
     ?drug rdfs:label ?drugLabel.
     ?drugClass rdfs:label ?drugClassLabel.
                         }
-OPTIONAL { ?drug wdt:P279 ?drugClass. }
+OPTIONAL { ?drug wdt:P2868 ?drugClass. }
   }
 GROUP BY  ?drugClassLabel
 ORDER BY DESC(?drugClass)
@@ -127,7 +130,7 @@ ORDER BY DESC(?drugClass)
       var resultsSimple = await wdk.simplify.sparqlResults(results)
 
 
-const resultsMapped = resultsSimple.map((result) => ({"name": result.drug.classLabel, "children": result.drug.value.split(",").map((drug)=>({name: drug, size: 500}))}))
+const resultsMapped = resultsSimple.map((result) => ({"name": result.drug.classLabel, "children": result.drug.value.split(",").map((drug)=>({name: drug, size: result.DiseaseCount}))}))
     console.log(resultsMapped)
 
         var root = {name: "main", children: resultsMapped};
