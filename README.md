@@ -14,7 +14,11 @@ Underneath, you can find directions on running the code and using the platform.
 * This page contains the information for each drug in the database, users can use the search bar for quick access to the relevant drug.
 
 ## Guide to our GitHub repository
-Our repository is divided into... 
+Our repository is structured in the following manner:
+* Website file --> contains all source code that 
+* AUTHORS file --> 
+* LICENCE file --> 
+* README file --> 
 
 
 
