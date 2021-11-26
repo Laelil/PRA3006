@@ -20,6 +20,8 @@ Our repository is structured in the following manner:
 * LICENCE file --> 
 * README file --> 
 
+*INCLUDE THE ISSUE* --> if you load the website from another place, the page is not complete (bubble graph disappears)
+
 
 
 
