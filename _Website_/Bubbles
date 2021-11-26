@@ -47,46 +47,17 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>Drug targeting in PTSD</h1>
-        <p>How does Post Traumatic Stress Disorder treatment drugs interact with their target proteins, and what is their role in relevant biological mechanisms?</p>
-    </div>
+  
 
-    <div class="navbar">
-        <ul>
-            <li><a class="current" href="Homepage.html">Home</a></li>
-            <li><a href="DrugTable.html">Drug List</a></li>
-            <li><a href="About.html">About</a></li>
-        </ul>
-    </div>
-
+    
   <div class="container">
   
     <div class="titl">
         Overview
     </div>
 
-    <!-- Background information into PTSD -->
-  
-    <div>
-        <p>Welcome to our platform!</p>
 
-        <p>We have compiled a tool that aids in discovering various facts and figures regarding Post-Traumatic Stress Disorder (PTSD).<br>
-            This condition has been described as "the complex somatic, cognitive, affective, and behavioral effects of psychological trauma". According to the Diagnostic and Statistical Manual of Mental Disorders, <br>
-            a person can develop PTSD when exposed to threatened or actual death, sexual violence and serious injury in either witnissing a trauma, or being indirectly exposed to aversive details of a trauma. <br>
-            While 70% of adults experience traumatic events at least once, 1 in 13 people will develop PTSD at some point in their life. Intrusive thoughts, nightmares, and hypervigilance are a few examples of symptoms that characterize PTSD. </p>
 
-        <p>Our research is directed towards identifying the interactions between known PTSD treatment drugs and their target proteins. Additionally, we aimed at providing some general characteristics of the identified drugs.<br> 
-           * The user can click on any bubble to display the list of drugs beloning to the designated class.<br>
-           * If more information regarding a particular drug is desired, the user can refer to the 'Drug list' tab.<br>
-           * This page contains the information for each drug in the database, users can use the search bar for quick access to the relevant drug.</p>
-
-        <p>We hope you enjoy!</p>
-
-        <p>For more information regarding PTSD, refer to the following link: <a href="https://www.psychiatry.org/patients-families/ptsd/what-is-ptsd">Information by The American Psychiatric Association</a> </p>
-      
-        <p></p>
-    </div>
 
  <div class="center1">
    
