@@ -107,7 +107,7 @@
 query = `#PTSDhome (the working version)
 SELECT DISTINCT ?drugClassLabel
 (GROUP_CONCAT(DISTINCT ?drugLabel;separator=", ") AS ?drug)
-(COUNT(?otherDisease) AS ?DiseaseCount)
+(COUNT(?otherDisease) AS ?DiseaseCount) // counts the number of other diseases the drug can treat
 {
   wd:Q202387 wdt:P2176 ?drug.
   ?drug wdt:P2175 ?otherDisease.
@@ -128,10 +128,10 @@ ORDER BY DESC(?drugClass)
       var resultsSimple = await wdk.simplify.sparqlResults(results)
 
 
-const resultsMapped = resultsSimple.map((result) => ({"name": result.drug.classLabel, "children": result.drug.value.split(",").map((drug)=>({name: drug, size: result.DiseaseCount}))}))
+const resultsMapped = resultsSimple.map((result) => ({"name": result.drug.classLabel, "children": result.drug.value.split(",").map((drug)=>({name: drug, size: result.DiseaseCount}))})) //restructering of the query data to jsn, split is used for faulty entries in the database
     console.log(resultsMapped)
 
-        var root = {name: "main", children: resultsMapped};
+        var root = {name: "main", children: resultsMapped}; // makes the results into the root for the graph + adds another element to the structure
 
         var nest = JSON.stringify(resultsMapped);
         //document.getElementById('output').innerHTML += nest;
