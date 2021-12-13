@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #809fff;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: #f2e5ff;
+}
+
+
+.label {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif; // bubble graph text etc.
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}
+
+</style>
+
+    <head>
+
+	<!-- d3 library --> <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Stylesheet --> <link rel='stylesheet' href="css/stylesheet.css">
+
+    <!-- Initialize a global WBK function -->
+    <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikibase-sdk.min.js"></script>
+    <!-- Initialize a global wdk object using the WBK object -->
+    <script src="https://cdn.rawgit.com/maxlath/wikidata-sdk/dist/dist/wikidata-sdk.min.js"></script>
+    </script>
+
+    <title>Drug targeting in Post Traumatic Stress Disorder(PTSD)</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet">
+        <!-- Fonts CSS-->
+        <link rel="stylesheet" href="css/heading.css">
+        <link rel="stylesheet" href="css/body.css">
+
+    </head>
+
+    <body id="page-top">
+
+        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">MAT3006 Programming in the Life Sciences</a>
+                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Backround">BACKGROUND</a>
+ 			</li>
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#BubbleGraph">BUBBLE GRAPH</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#About">ABOUT</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="drug.html">DRUG LIST</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                 <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" <img src="Images/SIX_0086475E-D432-4312-A5D4-B7C6CA03D7B0.PNG">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">Drug Targeting in PTSD</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">How do drugs that are used to treat Post-Traumatic Stress Disorder interact with their target proteins, and what is their role in relevant biological mechanisms?</p>
+            </div>
+        </header>
+
+        <section class="page-section portfolio" id="Backround">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">BACKGROUND</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Items-->
+        <p>Welcome to our platform!</p>
+
+        <p>We have compiled a tool that aids in discovering various facts and figures regarding Post-Traumatic Stress Disorder (PTSD).<br>
+            This condition has been described as "the complex somatic, cognitive, affective, and behavioral effects of psychological trauma". According to the Diagnostic and Statistical Manual of Mental Disorders, <br>
+            a person can develop PTSD when exposed to threatened or actual death, sexual violence and serious injury in either witnissing a trauma, or being indirectly exposed to aversive details of a trauma. <br>
+            While 70% of adults experience traumatic events at least once, 1 in 13 people will develop PTSD at some point in their life. Intrusive thoughts, nightmares, and hypervigilance are a few examples of symptoms that characterize PTSD. </p>
+
+        <p>Our research is directed towards identifying the interactions between known PTSD treatment drugs and their target proteins. Additionally, we aimed at providing some general characteristics of the identified drugs.<br> 
+           * The user can click on any bubble to display the list of drugs beloning to the designated class.<br>
+           * If more information regarding a particular drug is desired, the user can refer to the 'Drug list' tab.<br>
+           * This page contains the information for each drug in the database, users can use the search bar for quick access to the relevant drug.</p>
+
+        <p>We hope you enjoy!</p>
+
+        <p>For more information regarding PTSD, refer to the following link: <a href="https://www.psychiatry.org/patients-families/ptsd/what-is-ptsd">Information by The American Psychiatric Association</a> </p>
+      
+        <p></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Modal-->
+        <section class="page-section bg-primary text-white mb-0" id="BubbleGraph">
+            <div class="container">
+                <!-- About Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-white">BUBBLE GRAPH</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->                    
+
+ <div class="center1">
+   
+<pre id="output"></pre>
+
+
+
+<p id="demo"></p>
+
+
+
+<svg width="960" height="960"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+
+query = `#PTSDhome (the working version)
+SELECT DISTINCT ?drugClassLabel
+(GROUP_CONCAT(DISTINCT ?drugLabel;separator=", ") AS ?drug)
+(COUNT(?otherDisease) AS ?DiseaseCount)
+{
+  wd:Q202387 wdt:P2176 ?drug.
+  ?drug wdt:P2175 ?otherDisease.
+
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
+    ?drug rdfs:label ?drugLabel.
+    ?drugClass rdfs:label ?drugClassLabel.
+                        }
+OPTIONAL { ?drug wdt:P2868 ?drugClass. }
+  }
+GROUP BY  ?drugClassLabel
+ORDER BY DESC(?drugClass)
+`;
+    const url = wdk.sparqlQuery(query)
+    async function main () {
+      const response = await fetch(url)
+      const results = await response.json()
+      var resultsSimple = await wdk.simplify.sparqlResults(results)
+
+
+const resultsMapped = resultsSimple.map((result) => ({"name": result.drug.classLabel, "children": result.drug.value.split(",").map((drug)=>({name: drug, size: result.DiseaseCount}))}))
+    console.log(resultsMapped)
+
+        var root = {name: "main", children: resultsMapped};
+
+        var nest = JSON.stringify(resultsMapped);
+        //document.getElementById('output').innerHTML += nest;
+
+        var svg = d3.select("svg"),
+    margin = 20,
+    diameter = +svg.attr("width"),
+    g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+var color = d3.scaleLinear()
+    .domain([-1, 5])
+    .range(["hsla(239, 100%, 62%, 1))", "hsla(265, 100%, 47%, 0.2)"])
+    .interpolate(d3.interpolateHcl);
+
+var pack = d3.pack()
+    .size([diameter - margin, diameter - margin])
+    .padding(2);
+
+//root = JSON.parse(nest);
+
+  //root = resultsMapped;
+
+  root = d3.hierarchy(root)
+      .sum(function(d) { return d.size; })
+      .sort(function(a, b) { return b.value - a.value; });
+
+  var focus = root,
+      nodes = pack(root).descendants(),
+      view;
+
+  var circle = g.selectAll("circle")
+    .data(nodes)
+    .enter().append("circle")
+      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+
+  var text = g.selectAll("text")
+    .data(nodes)
+    .enter().append("text")
+      .attr("class", "label")
+      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+      .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
+      .text(function(d) { return d.data.name; });
+
+  var node = g.selectAll("circle,text");
+
+  svg
+      .style("background", color(-1))
+      .on("click", function() { zoom(root); });
+
+  zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+    function zoom(d) {
+    var focus0 = focus; focus = d;
+
+    var transition = d3.transition()
+        .duration(d3.event.altKey ? 7500 : 750)
+        .tween("zoom", function(d) {
+          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+          return function(t) { zoomTo(i(t)); };
+        });
+
+    transition.selectAll("text")
+      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  }
+
+  function zoomTo(v) {
+    var k = diameter / v[2]; view = v;
+    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+    circle.attr("r", function(d) { return d.r * k; });
+  }
+      
+
+
+    return resultsSimple
+    }
+    results = main()
+  
+</script>
+ </div>
+ </div>
+             
+            </div>
+        </section>
+
+<section class="page-section portfolio" id="About">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">ABOUT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+  		<!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Items-->
+<p>We have developed this platform as part of the 'Programming in the Life Sciences' skills course, offered at the Maastricht Science Programme.<br>
+       Our project was compiled over the course of four weeks, during which we used a variety of programming platforms and online tools to help achieve our final product.<br>
+       More specifically, we gathered relevant data for our research question using SPARQL queries, and applied the JavaScript library 'D3.js' to visualize this data using HTML and CSS.<br>
+       Results of this finalized piece of work are visualized in an interactive graph on the homepage, where details on how to use our website are outlined.</p>
+    
+    <p>For a complete survey of all of the code that was implemented into our website, users can refer to the online <a href="https://github.com/Laelil/PRA3006">GitHub repository</a> <br>
+        Here, we also disclose the particularities of the public licence applied to our project, as well as other public resources we used.</p> 
+		</div>
+        </section>
+
+               <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">LOCATION</h4>
+                        <p class="pre-wrap lead mb-0"> Paul-Henri Spaaklan 1 </p>
+			<p class="pre-wrap lead mb-0"> 6229 EN Maastricht </p>
+			    <p class="pre-wrap lead mb-0"> The Netherlands </p>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="mb-4">ABOUT THE COURSE</h4> 
+			    <p class="pre-wrap lead mb-0"> PRA3007 </p>
+			    <p class="pre-wrap lead mb-0"> Programming in the Life Sciences </p>
+			    <p class="pre-wrap lead mb-0"> Maastricht Science Programme </p>
+			    <p class="pre-wrap lead mb-0"> Maastricht University </p>
+                    </div>
+<div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">DEVELOPERS</h4>
+	                <p class="pre-wrap lead mb-0"> Carolin Malmendier </p>
+			<p class="pre-wrap lead mb-0"> Claire Billingsley </p>
+			<p class="pre-wrap lead mb-0"> Lila Annagiulia Penelope Gianni </p>
+			<p class="pre-wrap lead mb-0"> Tana Greijn </p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+            <div class="container"><small class="pre-wrap"> Copyright © General Public Licence V3 2021 </small></div>
+        </section>
+
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

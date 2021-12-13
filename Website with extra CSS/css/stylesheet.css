@@ -1,0 +1,120 @@
+/* Basic text and page styling */ 
+/* */ 
+
+.header {
+  padding: 45px; 
+  text-align: center; 
+  background: #cc99ff; 
+  color: #000000; 
+  font-family: 'Arial';
+  font-size: 20px;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.header h2 {
+  font-size: 30px;
+  font-family: 'Arial';
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial';
+  min-width: 1300px;
+}
+
+.titl { 
+  text-align: center; 
+  color: #000000; 
+  font-family: 'Arial';
+  font-size: 30px;
+  padding: 20px; 
+}
+
+.container {
+	margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Navigational bar styling */ 
+
+.navbar {
+  background-color: #b3c6ff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Garamond';
+}
+
+li a {
+  display: block;
+  background-color: #c6b3ff;
+  color: #000000;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+}
+
+li a.final {
+  float: right;
+}
+
+li a.current {
+  background-color: #9999ff;
+}
+
+li a:hover {
+  background-color: #809fff;
+}
+
+/* Table styling */ 
+
+.photos img {
+    width: 250px;
+    height: 250px;
+}
+
+.table, th {
+  border:1px solid black;
+  font-size: 19px;
+  padding: 8px;
+  background-color: #c6b3ff;
+ }
+
+table{
+  padding:2px;
+  border:2px solid black;
+  text-align: center; 
+ }
+
+.center1 {
+	margin-left: 50px;
+  margin-right: 50px;
+}
+
+.center2 {
+	margin-left: 200px;
+  margin-right: 200px;
+}
+
+.drugnav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+li a.diff {
+  background-color: #e5e5ff;
+}
+
+li a.diff:hover {
+  background-color: #c6b3ff;
+}
