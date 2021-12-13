@@ -1,5 +1,4 @@
 # README
-*PAGE SHOULD BE UPDATED ONCE OUR FINAL WEBSITE IS COMPLETE*
 
 This code provides a visual representation of the biological question we aimed to investigate during our project in the practical course: Programming of The Life Sciences. Our research is focused on PTSD treatment drugs and their interaction with biological pathways. 
 Underneath, you can find directions on running the code and using the platform.
@@ -17,10 +16,10 @@ Underneath, you can find directions on running the code and using the platform.
 
 ## Guide to our GitHub repository
 Our repository is structured in the following manner:
-* Website file --> contains all source code that 
-* AUTHORS file --> 
-* LICENCE file --> 
-* README file --> 
+* Website file --> contains all source code of our website
+* AUTHORS file --> contributing authors of this project
+* LICENCE file --> licence issued in this project
+* README file --> information regarding website and Github usage
 
 *INCLUDE THE ISSUE* --> if you load the website from another place, the page is not complete (bubble graph disappears)
 
