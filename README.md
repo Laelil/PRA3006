@@ -21,7 +21,9 @@ Our repository is structured in the following manner:
 * LICENCE file --> licence issued in this project
 * README file --> information regarding website and Github usage
 
-*INCLUDE THE ISSUE* --> if you load the website from another place, the page is not complete (bubble graph disappears)
+## Disclaimer
+One issue is that the bubble graph does not load in the homepage 100% of the time. In case this happens, try and reload the page until the graph appears. 
+
 
 
 
